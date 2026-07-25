@@ -5,10 +5,10 @@ Date: 25 July 2026
 
 ==================== CAR DEMO ====================
 
-TEST 1 - ENGINE-OFF RULE
+TRYING TO MOVE BEFORE STARTING THE ENGINE
 BMW cannot move because the engine is off.
 
-TEST 2 - BMW MOVEMENT AND TURBO
+BMW DRIVE
 BMW engine started.
 BMW is driving at 20 km/h.
 BMW increased speed to 50 km/h.
@@ -16,13 +16,13 @@ BMW turned left.
 BMW turbo mode activated at 100 km/h.
 BMW horn sounded.
 
-TEST 3 - TESLA MOVEMENT
+TESLA DRIVE
 Tesla engine started.
 Tesla is driving at 20 km/h.
 Tesla turned right.
 Tesla slowed down to 5 km/h.
 
-TEST 4 - INDEPENDENT OBJECT STATES
+CURRENT STATE OF BOTH OBJECTS
 BMW state:
 Brand     : BMW
 Color     : Black
@@ -43,7 +43,7 @@ Direction : Right
 Engine on : true
 Turbo on  : false
 
-TEST 5 - STOP ENGINE RULE
+STOPPING THE BMW
 BMW engine stopped.
 Brand     : BMW
 Color     : Black
@@ -54,7 +54,7 @@ Direction : Left
 Engine on : false
 Turbo on  : false
 
-Null reference check: futureCar = null
+futureCar points to: null
 
 ================= CALCULATOR DEMO =================
 
@@ -64,21 +64,21 @@ BASIC OPERATIONS
 10 * 5 = 50.0
 10 / 5 = 2.0
 
-NEW OPERATION 1 - MODULUS
-Normal case: 17 % 5 = 2.0
-Edge case: Cannot calculate modulus by zero.
+MODULUS
+17 % 5 = 2.0
+17 % 0: Cannot calculate modulus by zero.
 
-NEW OPERATION 2 - POWER
-Normal case: 2^5 = 32.0
-Edge case: 9^0 = 1.0
+POWER
+2^5 = 32.0
+9^0 = 1.0
 
-NEW OPERATION 3 - AVERAGE WITH VARARGS
-Normal case: average(10, 20, 30, 40) = 25.0
-Edge case: Average needs at least one number.
+AVERAGE
+average(10, 20, 30, 40) = 25.0
+average(): Average needs at least one number.
 
-NEW OPERATION 4 - MAXIMUM WITH VARARGS
-Normal case: maximum(4, 18, 7, 12) = 18.0
-Edge case: Maximum needs at least one number.
+MAXIMUM
+maximum(4, 18, 7, 12) = 18.0
+maximum(): Maximum needs at least one number.
 
-INVALID DIVISION TEST
+DIVISION BY ZERO
 Cannot divide by zero.

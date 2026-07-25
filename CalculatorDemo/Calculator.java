@@ -1,14 +1,10 @@
 /*
- * Student Name: Huzaifa Mukhtar
- * Seat Number: B25110006058
- * Section: B
- * Date: 25 July 2026
- * File: Calculator.java
- * Purpose: Provides basic and extended calculator operations.
+ * Huzaifa Mukhtar - B25110006058 - Section B
+ * Week 1 OOP Lab - 25 July 2026
+ * Calculator.java contains the operations used in the calculator program.
  */
 public class Calculator {
     public Calculator() {
-        // This calculator is stateless, so no fields need initialization.
     }
 
     public double add(double first, double second) {
@@ -41,6 +37,7 @@ public class Calculator {
         return Math.pow(base, exponent);
     }
 
+    // double... lets the method receive any number of values as an array.
     public double average(double... numbers) {
         if (numbers.length == 0) {
             throw new IllegalArgumentException("Average needs at least one number.");

@@ -1,38 +1,37 @@
 # Object-Oriented Programming - Week 1 Lab
 
-Student Name: Huzaifa Mukhtar
+- **Student:** Huzaifa Mukhtar
+- **Seat number:** B25110006058
+- **Section:** B
+- **Date:** 25 July 2026
 
-Seat Number: B25110006058
+## Files in this folder
 
-Section: B
+- `CarDemo` contains my `Car` class, the program I used to test it, and its UML diagram.
+- `CalculatorDemo` contains the calculator class, its test program, and its UML diagram.
+- `Documentation` contains the lab PDF, Laptop UML, stack and heap diagram, reflection, work plan, and my viva notes.
+- `SampleOutput.txt` contains the output I got after running both programs.
 
-Date: 25 July 2026
+I kept the `CarDemo` and `CalculatorDemo` folder names because they are the names used in the lab manual. Separate folders also allow both programs to have their own `Main.java`.
 
-## Submission Contents
+## Running the programs
 
-- `CarDemo`: enhanced Car class, driver program and matching UML.
-- `CalculatorDemo`: calculator class, driver program and matching UML.
-- `Documentation`: completed five-object worksheet, Laptop UML, stack/heap diagram, reflection, plan and viva answers.
-- `SampleOutput.txt`: actual output from compiling and running both programs.
-
-## How to Compile and Run
-
-Open a terminal inside `CarDemo`:
+For the car program, open a terminal in `CarDemo` and run:
 
 ```text
 javac Car.java Main.java
 java Main
 ```
 
-Open a terminal inside `CalculatorDemo`:
+For the calculator program, open a terminal in `CalculatorDemo` and run:
 
 ```text
 javac Calculator.java Main.java
 java Main
 ```
 
-## Main Design Choices
+## Notes about my code
 
-The Car has independent state for its brand, color, speed, fuel, gear, direction, engine and turbo mode. It cannot move while its engine is off or when it has no fuel. Speed never becomes negative, and stopping the engine resets the speed and gear.
+I kept the fields in `Car` private and changed them through methods. The car cannot move when its engine is off or its fuel is empty. Its speed cannot go below zero, and stopping the engine also resets the speed, gear, and turbo mode.
 
-The Calculator rejects division and modulus by zero. Its average and maximum operations use varargs and reject an empty list of values.
+The two car objects in `Main` keep separate values even though they use the same class. The calculator checks division and modulus by zero, and it also checks that `average()` and `maximum()` receive at least one number.

@@ -1,10 +1,7 @@
 /*
- * Student Name: Huzaifa Mukhtar
- * Seat Number: B25110006058
- * Section: B
- * Date: 25 July 2026
- * File: Car.java
- * Purpose: Models a car with state, movement rules and a turbo feature.
+ * Huzaifa Mukhtar - B25110006058 - Section B
+ * Week 1 OOP Lab - 25 July 2026
+ * Car.java stores the state and behaviour of one car.
  */
 public class Car {
     private String brand;
@@ -30,6 +27,7 @@ public class Car {
     public void setDetails(String brand, String color, double fuelLevel) {
         this.brand = brand;
         this.color = color;
+        // A fuel percentage should stay between 0 and 100.
         this.fuelLevel = Math.max(0.0, Math.min(100.0, fuelLevel));
     }
 
@@ -44,6 +42,7 @@ public class Car {
     }
 
     public void stopEngine() {
+        // A stopped car should not keep its moving state.
         this.speed = 0;
         this.gear = 0;
         this.turboOn = false;
@@ -74,6 +73,10 @@ public class Car {
     }
 
     public void moveSlow() {
+        if (!this.canMove()) {
+            return;
+        }
+
         this.speed = Math.max(0, this.speed - 15);
         if (this.speed == 0) {
             this.gear = 0;
@@ -134,6 +137,7 @@ public class Car {
     }
 
     private boolean canMove() {
+        // Every movement method uses the same engine and fuel checks.
         if (!this.engineOn) {
             System.out.println(this.brand + " cannot move because the engine is off.");
             return false;
@@ -148,6 +152,7 @@ public class Car {
     }
 
     private void useFuel(double amount) {
+        // Fuel is allowed to reach zero, but it should never become negative.
         this.fuelLevel = Math.max(0.0, this.fuelLevel - amount);
     }
 }
