@@ -1,1 +1,26 @@
+# Byte-code
 *.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual Machine / IDE
+.vscode/
+.idea/
+.claude/
+*.iml
+.project
+.classpath
+.settings/
+bin/
+out/
+target/
+
+# OS generated files
+.DS_Store
+Thumbs.db
